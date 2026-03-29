@@ -1,0 +1,1038 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="赵杰 ZHAO JIE">
+    <meta name="description" content="ZHAO JIE | Executive Profile - Finance PhD Researcher & Investment Director">
+    <meta name="copyright" content="Copyright © 2026 ZHAO JIE. All rights reserved.">
+    <title>ZHAO JIE | Finance PhD & Investment Director</title>
+    
+    <style>
+        :root {
+            --navy: #0A192F;
+            --light-navy: #112240;
+            --gold: #C5A059;
+            --light-gold: #D4AF37;
+            --slate: #8892B0;
+            --light-slate: #A8B2D1;
+            --white: #E6F1FF;
+            --pure-white: #FFFFFF;
+            --bg-gray: #F8F9FA;
+            --border: rgba(136, 146, 176, 0.2);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', 'Segoe UI', -apple-system, BlinkMacSystemFont, 'Microsoft YaHei', sans-serif;
+            background-color: var(--bg-gray);
+            color: var(--navy);
+            line-height: 1.6;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        /* Navigation / Language Toggle */
+        .nav-container {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid var(--border);
+            z-index: 1000;
+            padding: 15px 50px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo-text {
+            font-weight: 700;
+            font-size: 14px;
+            letter-spacing: 3px;
+            color: var(--navy);
+        }
+
+        .lang-switch {
+            display: flex;
+            gap: 8px;
+            background: var(--bg-gray);
+            padding: 4px;
+            border-radius: 30px;
+            border: 1px solid var(--border);
+        }
+
+        .lang-btn {
+            padding: 6px 16px;
+            border: none;
+            background: transparent;
+            color: var(--slate);
+            font-size: 12px;
+            font-weight: 600;
+            cursor: pointer;
+            border-radius: 20px;
+            transition: all 0.3s ease;
+            letter-spacing: 1px;
+        }
+
+        .lang-btn.active {
+            background: var(--navy);
+            color: var(--gold);
+            box-shadow: 0 2px 8px rgba(10, 25, 47, 0.2);
+        }
+
+        .lang-btn:hover:not(.active) {
+            color: var(--navy);
+        }
+
+        /* Main Container */
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 100px 40px 60px;
+        }
+
+        /* Hero Section */
+        .hero {
+            text-align: center;
+            padding: 60px 0 50px;
+            border-bottom: 2px solid var(--gold);
+            margin-bottom: 50px;
+            position: relative;
+        }
+
+        .hero::after {
+            content: '';
+            position: absolute;
+            bottom: -2px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 100px;
+            height: 2px;
+            background: var(--navy);
+        }
+
+        .name-main {
+            font-size: 48px;
+            font-weight: 700;
+            letter-spacing: 4px;
+            color: var(--navy);
+            margin-bottom: 10px;
+            text-transform: uppercase;
+        }
+
+        .name-sub {
+            font-size: 24px;
+            color: var(--slate);
+            font-weight: 400;
+            margin-bottom: 20px;
+            font-family: 'Georgia', 'Songti SC', serif;
+        }
+
+        .title-badge {
+            display: inline-block;
+            background: var(--navy);
+            color: var(--gold);
+            padding: 8px 24px;
+            font-size: 13px;
+            font-weight: 600;
+            letter-spacing: 2px;
+            margin: 0 4px;
+            border-radius: 4px;
+        }
+
+        .contact-strip {
+            margin-top: 30px;
+            font-size: 13px;
+            color: var(--slate);
+            letter-spacing: 1px;
+        }
+
+        .email-link {
+            color: var(--navy);
+            text-decoration: none;
+            font-weight: 600;
+            border-bottom: 1px solid var(--gold);
+            transition: all 0.3s ease;
+            display: inline-block;
+            margin-top: 8px;
+        }
+
+        .email-link:hover {
+            color: var(--gold);
+            border-bottom-color: var(--navy);
+        }
+
+        /* Content Sections */
+        .section {
+            margin-bottom: 60px;
+            opacity: 0;
+            transform: translateY(20px);
+            animation: fadeInUp 0.6s ease forwards;
+        }
+
+        .section:nth-child(2) { animation-delay: 0.1s; }
+        .section:nth-child(3) { animation-delay: 0.2s; }
+        .section:nth-child(4) { animation-delay: 0.3s; }
+
+        @keyframes fadeInUp {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .section-header {
+            display: flex;
+            align-items: baseline;
+            margin-bottom: 30px;
+            padding-bottom: 15px;
+            border-bottom: 1px solid var(--border);
+        }
+
+        .section-title {
+            font-size: 22px;
+            font-weight: 700;
+            color: var(--navy);
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            margin-right: 15px;
+        }
+
+        .section-title-cn {
+            font-size: 16px;
+            color: var(--slate);
+            font-weight: 500;
+            font-family: 'Georgia', 'Songti SC', serif;
+        }
+
+        /* Cards */
+        .card {
+            background: var(--pure-white);
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            padding: 30px;
+            margin-bottom: 20px;
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .card::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0;
+            bottom: 0;
+            width: 4px;
+            background: var(--gold);
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        .card:hover {
+            transform: translateX(5px);
+            box-shadow: 0 10px 30px rgba(10, 25, 47, 0.08);
+        }
+
+        .card:hover::before {
+            opacity: 1;
+        }
+
+        .card-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: 12px;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .card-title {
+            font-size: 17px;
+            font-weight: 700;
+            color: var(--navy);
+            margin-bottom: 4px;
+        }
+
+        .card-subtitle {
+            font-size: 15px;
+            color: var(--light-navy);
+            font-weight: 600;
+        }
+
+        .card-meta {
+            font-size: 13px;
+            color: var(--slate);
+            font-style: italic;
+            background: var(--bg-gray);
+            padding: 4px 12px;
+            border-radius: 4px;
+            white-space: nowrap;
+        }
+
+        .qs-tag {
+            display: inline-block;
+            background: var(--navy);
+            color: var(--gold);
+            font-size: 10px;
+            padding: 2px 8px;
+            border-radius: 3px;
+            margin-left: 8px;
+            font-weight: 700;
+            letter-spacing: 1px;
+        }
+
+        .card-content {
+            font-size: 14px;
+            line-height: 1.8;
+            color: var(--slate);
+        }
+
+        .card-content ul {
+            list-style: none;
+            margin-top: 10px;
+        }
+
+        .card-content li {
+            position: relative;
+            padding-left: 20px;
+            margin-bottom: 8px;
+        }
+
+        .card-content li::before {
+            content: '▹';
+            position: absolute;
+            left: 0;
+            color: var(--gold);
+            font-weight: bold;
+        }
+
+        /* Chinese Content Styling */
+        .cn-content {
+            margin-top: 12px;
+            padding-top: 12px;
+            border-top: 1px dashed var(--border);
+            font-size: 13px;
+            color: var(--slate);
+            line-height: 1.7;
+            font-family: 'Georgia', 'Songti SC', 'Microsoft YaHei', serif;
+            display: none; /* Hidden by default in EN mode */
+        }
+
+        .cn-content.visible {
+            display: block;
+        }
+
+        .cn-content ul {
+            margin-top: 8px;
+        }
+
+        .cn-content li::before {
+            content: '•';
+            color: var(--slate);
+        }
+
+        .cn-label {
+            font-size: 11px;
+            color: var(--gold);
+            font-weight: 700;
+            margin-bottom: 5px;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+        }
+
+        body[data-lang="cn"] .cn-content {
+            display: block;
+            font-size: 14px;
+            color: var(--light-navy);
+            border-top: 2px solid var(--gold);
+            margin-top: 15px;
+            padding-top: 15px;
+        }
+
+        body[data-lang="cn"] .card-content {
+            display: none;
+        }
+
+        body[data-lang="cn"] .section-title {
+            display: none;
+        }
+
+        body[data-lang="cn"] .section-title-cn {
+            font-size: 22px;
+            color: var(--navy);
+            font-weight: 700;
+            display: block;
+        }
+
+        body[data-lang="cn"] .card-title {
+            font-size: 18px;
+        }
+
+        body[data-lang="cn"] .card-subtitle {
+            font-size: 16px;
+        }
+
+        /* Publications Special Layout */
+        .pub-list {
+            display: grid;
+            gap: 15px;
+        }
+
+        .pub-item {
+            background: white;
+            border-left: 3px solid var(--gold);
+            padding: 20px;
+            border-radius: 0 8px 8px 0;
+            border-top: 1px solid var(--border);
+            border-right: 1px solid var(--border);
+            border-bottom: 1px solid var(--border);
+        }
+
+        .pub-title {
+            font-weight: 700;
+            color: var(--navy);
+            font-size: 15px;
+            margin-bottom: 6px;
+            line-height: 1.4;
+        }
+
+        .pub-venue {
+            color: var(--accent);
+            font-size: 14px;
+            font-weight: 600;
+        }
+
+        .pub-meta {
+            font-size: 12px;
+            color: var(--slate);
+            margin-top: 6px;
+            display: flex;
+            gap: 10px;
+            align-items: center;
+        }
+
+        .pub-tag {
+            background: rgba(197, 160, 89, 0.15);
+            color: var(--gold);
+            padding: 2px 10px;
+            border-radius: 3px;
+            font-weight: 700;
+            font-size: 10px;
+            letter-spacing: 1px;
+        }
+
+        .pub-tag.ssci {
+            background: var(--navy);
+            color: white;
+        }
+
+        /* Compact Lists for Certs/Langs */
+        .compact-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+        }
+
+        .compact-list {
+            list-style: none;
+        }
+
+        .compact-list li {
+            padding: 8px 0;
+            border-bottom: 1px solid var(--border);
+            font-size: 14px;
+            color: var(--slate);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .compact-list li::before {
+            content: '▪';
+            color: var(--gold);
+            font-size: 20px;
+            line-height: 0;
+        }
+
+        .lang-row {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 0;
+            border-bottom: 1px solid var(--border);
+        }
+
+        .lang-name {
+            font-weight: 600;
+            color: var(--navy);
+            font-size: 14px;
+        }
+
+        .lang-level {
+            font-size: 13px;
+            color: var(--slate);
+        }
+
+        /* Awards */
+        .awards-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+        }
+
+        .award-pill {
+            background: white;
+            border: 1px solid var(--border);
+            padding: 10px 20px;
+            border-radius: 30px;
+            font-size: 13px;
+            color: var(--navy);
+            font-weight: 600;
+            box-shadow: 0 2px 0 rgba(10, 25, 47, 0.05);
+        }
+
+        /* Footer */
+        .footer {
+            text-align: center;
+            padding: 40px;
+            border-top: 1px solid var(--border);
+            margin-top: 60px;
+            font-size: 12px;
+            color: var(--slate);
+        }
+
+        .footer strong {
+            color: var(--navy);
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .nav-container {
+                padding: 15px 20px;
+            }
+            
+            .container {
+                padding: 80px 20px 40px;
+            }
+            
+            .name-main {
+                font-size: 32px;
+            }
+            
+            .compact-grid {
+                grid-template-columns: 1fr;
+                gap: 20px;
+            }
+            
+            .card-header {
+                flex-direction: column;
+            }
+            
+            .card-meta {
+                align-self: flex-start;
+            }
+        }
+
+        /* Print Optimization */
+        @media print {
+            .nav-container {
+                display: none;
+            }
+            
+            .container {
+                padding-top: 40px;
+            }
+            
+            .card {
+                break-inside: avoid;
+                box-shadow: none;
+                border: 1px solid #ddd;
+            }
+            
+            .cn-content {
+                display: block !important;
+                border-top: 1px solid #ddd;
+            }
+        }
+
+        /* Subtle animations */
+        @media (prefers-reduced-motion: no-preference) {
+            .card:hover {
+                transform: translateY(-2px) translateX(5px);
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Language Switcher -->
+    <nav class="nav-container">
+        <div class="logo-text">ZJ · PROFILE</div>
+        <div class="lang-switch">
+            <button class="lang-btn active" onclick="setLang('en')">EN</button>
+            <button class="lang-btn" onclick="setLang('cn')">中文</button>
+        </div>
+    </nav>
+
+    <div class="container">
+        <!-- Hero -->
+        <header class="hero">
+            <div class="name-main">ZHAO JIE</div>
+            <div class="name-sub">赵 杰</div>
+            <div style="margin-top: 20px;">
+                <span class="title-badge">PhD Researcher</span>
+                <span class="title-badge">Director of Investment & Financing</span>
+                <span class="title-badge">投融资总监</span>
+            </div>
+            <div class="contact-strip">
+                Dual PhD Candidate in Finance · 金融学双博士在读<br>
+                <a href="mailto:chaokimi620@gmail.com" class="email-link">chaokimi620@gmail.com</a>
+            </div>
+        </header>
+
+        <!-- Education -->
+        <section class="section">
+            <div class="section-header">
+                <span class="section-title">Education</span>
+                <span class="section-title-cn">教育背景</span>
+            </div>
+
+            <!-- New Visiting Scholar Entry -->
+            <div class="card">
+                <div class="card-header">
+                    <div>
+                        <div class="card-title">Visiting Scholar <span class="qs-tag">QS 63</span></div>
+                        <div class="card-subtitle">Taiwan National University | 国立台湾大学</div>
+                    </div>
+                    <span class="card-meta">2026 - Present | 2026年至今</span>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-header">
+                    <div>
+                        <div class="card-title">Doctor of Philosophy (PhD) <span class="qs-tag">QS 150</span></div>
+                        <div class="card-subtitle">Universiti Teknologi Malaysia (Malaysia) | 马来西亚工艺大学</div>
+                    </div>
+                    <span class="card-meta">2025 - Present | 2025年至今</span>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-header">
+                    <div>
+                        <div class="card-title">Doctor of Business Administration (DBA) <span class="qs-tag">QS 166</span></div>  2024 - Present | 2024年至今
+                        <div class="card-subtitle">Al-Farabi Kazakh National University (Kazakhstan) | 哈萨克斯坦阿里-法拉比国立大学</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-header">
+                    <div>
+                        <div class="card-title">Master of Business Administration (MBA)</div>
+                        <div class="card-subtitle">City University Malaysia (Malaysia TOP10) | 马来西亚城市大学（马来西亚前十大学）</div>
+                    </div>
+                    <span class="card-meta">2022 - 2023 | GPA: 3.69</span>
+                </div>
+                <div class="card-content">
+                    Main courses: Corporate Governance & Social Responsibility; Managerial Economics; Marketing Management; Operation Management; Corporate Finance; Managerial Accounting; Organizations: Behavior, Structure, Processes; Research Methodology; International Business; Project Management; Strategic Management
+                </div>
+                <div class="cn-content">
+                    <div class="cn-label">Chinese 中文</div>
+                    主修课程：公司治理与社会责任、管理经济学、市场营销管理、运营管理、公司金融、管理会计、组织行为学/结构/流程、研究方法论、国际商务、项目管理、战略管理
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-header">
+                    <div>
+                        <div class="card-title">Bachelor of Accounting</div>
+                        <div class="card-subtitle">Beijing City University (China) | 北京城市大学（中国）</div>
+                    </div>
+                    <span class="card-meta">2006 - 2009 | 2006-2009年</span>
+                </div>
+                <div class="card-content">
+                    Main courses: Political Economy; Basic Accounting; Introduction to Economic Law; Intermediate Financial Accounting; Cost Accounting; Financial Accounting; Management Accounting; Chinese Taxation; Introduction to Enterprise Management; Basic Law; The National Economy
+                </div>
+                <div class="cn-content">
+                    <div class="cn-label">Chinese 中文</div>
+                    主修课程：政治经济学、基础会计、经济法概论、中级财务会计、成本会计、财务会计、管理会计、中国税制、企业管理概论、基础法学、国民经济
+                </div>
+            </div>
+        </section>
+
+        <!-- Professional Experience -->
+        <section class="section">
+            <div class="section-header">
+                <span class="section-title">Professional Experience</span>
+                <span class="section-title-cn">职业经历</span>
+            </div>
+
+            <!-- Job 1 -->
+            <div class="card">
+                <div class="card-header">
+                    <div>
+                        <div class="card-title">Director of Investment & Financing | 投融资总监</div>
+                        <div class="card-subtitle">Chongqing Gaoxin Zhisuan Technology Service Co., Ltd. | 重庆高新智算科技服务有限公司</div>
+                    </div>
+                    <span class="card-meta">2024 - Present | 2024年至今</span>
+                </div>
+                <div class="card-content">
+                    <ul>
+                        <li>Participated in a highly representative sustainable finance practice: In 2026, the Doha branch of Industrial and Commercial Bank of China successfully underwrote the first local currency sustainable Islamic bond (Sukuk)</li>
+                    </ul>
+                </div>
+                <div class="cn-content">
+                    <div class="cn-label">中文概述</div>
+                    参与一项具有高度代表性的可持续金融实践：2026年，中国工商银行多哈分行成功承销首单本币可持续伊斯兰债券（Sukuk）
+                </div>
+            </div>
+
+            <!-- Job 2 -->
+            <div class="card">
+                <div class="card-header">
+                    <div>
+                        <div class="card-title">Mainland Affairs Dept. General Manager | 内地事务部总经理</div>
+                        <div class="card-subtitle">Top Talent Global Development Co. | 顶尖人才全球发展有限公司（中国香港）</div>
+                    </div>
+                    <span class="card-meta">2024 - Present | 2024年至今</span>
+                </div>
+                <div class="card-content">
+                    International business development and cross-border investment management | 负责国际业务拓展及跨境投资管理
+                </div>
+            </div>
+
+            <!-- Job 3: Zheshang Bank -->
+            <div class="card">
+                <div class="card-header">
+                    <div>
+                        <div class="card-title">General Manager | 总经理</div>
+                        <div class="card-subtitle">Zheshang Bank Co., Ltd. (Chengdu Branch) | 浙商银行股份有限公司（成都分行）</div>
+                    </div>
+                    <span class="card-meta">Feb 2018 - Jul 2022 | 2018年2月 - 2022年7月</span>
+                </div>
+                <div class="card-content">
+                    <ul>
+                        <li>From 2017 to 2022, assisted in obtaining bank financing of nearly RMB 40 billion for Chengdu High-tech Investment Group, Chengdu XGIMI Technology, Chengdu Red Flag Chain, Chengdu Airport Xingcheng Investment Group, Sichuan Airport Group, Chengdu Shuangliu International Airport, Chengdu Jiaozi Park Financial Business District Investment and Development Co., Chengdu Tianfu International Biological City Development Group, Chengdu Art Vocational University and other enterprises</li>
+                        <li>From 2019 to 2022, assisted in obtaining venture capital investments of RMB 10 to 30 million per household for innovative enterprises and start-ups in Chengdu Tianfu International Bio-Industrial Park</li>
+                        <li>In 2021, assisted in raising RMB 1.562 billion for Chengdu X-Gimi Technology Co., Ltd. in its first IPO on China's A-share Science and Technology Innovation Board</li>
+                        <li>In 2020, raised RMB 2.16 billion in financing for the innovative model of "financial lease financing + letter of credit" for Chengdu High-tech Investment Group, Chengdu Airport Xingcheng Investment Group, and Chengdu Tianfu International Bio-City Development Group</li>
+                        <li>In 2018, assisted in obtaining a BBB rating from Moody's and issuing full-tracking US dollar notes in Hong Kong, raising US$300 million in global capital for Chengdu High-tech Investment Group</li>
+                    </ul>
+                </div>
+                <div class="cn-content">
+                    <div class="cn-label">中文业绩概述</div>
+                    <ul>
+                        <li>2017-2022年，协助成都高新投资集团、极米科技、红旗连锁、空港兴城投资集团、省机场集团、双流机场、交子公园金融商务区、天府国际生物城、成都艺术职业大学等<strong>获批近400亿元银行融资</strong></li>
+                        <li>2019-2022年，协助天府国际生物产业园创新企业<strong>每户获得1000-3000万元风险投资</strong></li>
+                        <li>2021年，协助极米科技科创板IPO<strong>募资15.62亿元</strong></li>
+                        <li>2020年，创新"融资租赁+信用证"模式为高新投等<strong>募资21.6亿元</strong></li>
+                        <li>2018年，协助高新投获穆迪BBB评级并发行<strong>3亿美元全球债券</strong></li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Job 4 -->
+            <div class="card">
+                <div class="card-header">
+                    <div>
+                        <div class="card-title">Assistant General Manager | 助理总经理</div>
+                        <div class="card-subtitle">Xiamen Bank Co. (Chongqing Branch) | 厦门银行股份有限公司（重庆分行）</div>
+                    </div>
+                    <span class="card-meta">Feb 2017 - Feb 2018 | 2017年2月 - 2018年2月</span>
+                </div>
+                <div class="card-content">
+                    <ul>
+                        <li>Responsible for marketing development and public relations maintenance of large enterprises within the jurisdiction of Chengdu (listed companies, state-owned enterprises, real estate development enterprises, chain enterprises, foreign-related enterprises, etc.)</li>
+                        <li>Responsible for fund management, credit support for foreign exchange funds of foreign-related enterprises and communication and reporting to foreign exchange authorities</li>
+                        <li>Assisted in analyzing the capital management of enterprises and support of the credit work of enterprises, and connected with the head enterprise or Venture capital firm enterprise angel investment, equity investment</li>
+                    </ul>
+                </div>
+                <div class="cn-content">
+                    <div class="cn-label">中文概述</div>
+                    负责成都辖区内大型企业（上市公司、国企、房企、连锁企业、涉外企业）营销拓展和公关维护；负责涉外企业外汇资金信贷支持及外管局沟通汇报；协助分析企业资金管理和信贷支持，对接头部企业或风投机构天使投资、股权投资
+                </div>
+            </div>
+
+            <!-- Job 5 -->
+            <div class="card">
+                <div class="card-header">
+                    <div>
+                        <div class="card-title">Agency Managers | 客户经理（主管级）</div>
+                        <div class="card-subtitle">China Everbright Bank Co. (Chengdu Branch) | 中国光大银行股份有限公司（成都分行）</div>
+                    </div>
+                    <span class="card-meta">Apr 2016 - Feb 2017 | 2016年4月 - 2017年2月</span>
+                </div>
+                <div class="card-content">
+                    <ul>
+                        <li>Led the team to investigate enterprise needs, write enterprise pre-loan survey report, analyze enterprise pre-loan financial status, analyze enterprise industry status, industry ranking, enterprise pre-loan risk analysis, and set up innovation structure to obtain indirect or direct financing from banks or financial markets</li>
+                        <li>Responsible for the in-loan inspection of the use of funds after financing, quarterly/annual financial report analysis, post-loan inspection of financing supervision before credit maturity and pre-financing renewal</li>
+                    </ul>
+                </div>
+                <div class="cn-content">
+                    带队调研企业需求，撰写贷前调查报告，分析财务状况、行业现状、风险分析，搭建创新结构获取银行或金融市场融资；负责贷后资金使用检查、季度/年度财报分析、授信到期前监管检查及续授信前检查
+                </div>
+            </div>
+
+            <!-- Job 6 -->
+            <div class="card">
+                <div class="card-header">
+                    <div>
+                        <div class="card-title">Agency Managers | 客户经理（主管级）</div>
+                        <div class="card-subtitle">China Minsheng Bank Co. (Chengdu Branch) | 中国民生银行股份有限公司（成都分行）</div>
+                    </div>
+                    <span class="card-meta">Feb 2012 - Mar 2015 | 2012年2月 - 2015年3月</span>
+                </div>
+                <div class="card-content">
+                    <ul>
+                        <li>Prepared survey reports of large credit granting enterprises in the department, and analyzed the pre-loan financial status of enterprises, small and micro enterprises and individuals</li>
+                        <li>Analyzed the industry status, industry ranking and pre-loan risk analysis of enterprises, core enterprises and small and micro enterprises</li>
+                        <li>Responsible for quarterly/annual behavior of individual customers, credit checks, in-loan checks to discuss the use of funds, post-loan checks to monitor financing before credit maturities, and checks before financing renewals</li>
+                    </ul>
+                </div>
+                <div class="cn-content">
+                    撰写部门大额授信企业调查报告，分析企业及小微企业、个人贷前财务状况；分析行业现状、排名及贷前风险；负责个人客户季度行为监控、信贷检查、贷中资金讨论、贷后融资监控及续授信前检查
+                </div>
+            </div>
+
+            <!-- Job 7 -->
+            <div class="card">
+                <div class="card-header">
+                    <div>
+                        <div class="card-title">Financial Managers | 理财经理</div>
+                        <div class="card-subtitle">OCBC Bank (China) Ltd. (Chengdu Branch) | 华侨银行（中国）有限公司（成都分行）</div>
+                    </div>
+                    <span class="card-meta">Feb 2010 - Feb 2012 | 2010年2月 - 2012年2月</span>
+                </div>
+                <div class="card-content">
+                    Marketing and development of individual customers in Sichuan Province, selling financial products, time deposits, insurance, funds, bonds, etc. issued by the bank; Assisted individual customers to handle business at the counter
+                </div>
+                <div class="cn-content">
+                    开发四川省个人客户，销售银行理财产品、定期存款、保险、基金、债券等；协助个人客户在柜台办理业务
+                </div>
+            </div>
+
+            <!-- Job 8 -->
+            <div class="card">
+                <div class="card-header">
+                    <div>
+                        <div class="card-title">Teller | 柜员</div>
+                        <div class="card-subtitle">Industrial and Commercial Bank of China (Chengdu Branch) | 中国工商银行股份有限公司（成都分行）</div>
+                    </div>
+                    <span class="card-meta">Jul 2009 - Feb 2010 | 2009年7月 - 2010年2月</span>
+                </div>
+                <div class="card-content">
+                    Responsible for cash counting at the counter, deposit/withdrawal business of individual and corporate customers, identification of counterfeit currency, compilation of bank counter statements and anti-money laundering
+                </div>
+                <div class="cn-content">
+                    负责柜台现金清点、个人及对公客户存取款业务、假币识别、银行柜台报表编制及反洗钱工作
+                </div>
+            </div>
+        </section>
+
+        <!-- Publications -->
+        <section class="section">
+            <div class="section-header">
+                <span class="section-title">Publications</span>
+                <span class="section-title-cn">学术出版物</span>
+            </div>
+
+            <div class="pub-list">
+                <div class="pub-item">
+                    <div class="pub-title">Language Barriers and Their Impact on International Business Expansion | 语言障碍及其对国际业务拓展的影响</div>
+                    <div class="pub-venue">International Journal of Science and Practice</div>
+                    <div class="pub-meta">
+                        Single Author · Nov 27, 2024 · Russia | 独立作者 · 2024年11月27日 · 俄罗斯
+                        <span class="pub-tag">Published</span>
+                    </div>
+                </div>
+
+                <div class="pub-item">
+                    <div class="pub-title">Navigating Financial Opportunities and Risks in the EU's Connectivity Strategy | 驾驭欧盟连通性战略中的金融机遇与风险</div>
+                    <div class="pub-venue">Scientific achievements of the Third Millennium</div>
+                    <div class="pub-meta">
+                        Single Author · Nov 27, 2024 · Russia | 独立作者 · 2024年11月27日 · 俄罗斯
+                        <span class="pub-tag">Published</span>
+                    </div>
+                </div>
+
+                <div class="pub-item">
+                    <div class="pub-title">Financial Innovation and Sustainable Economic Growth in Kazakhstan: Opportunities and Challenges | 哈萨克斯坦的金融创新与可持续经济增长：机遇与挑战</div>
+                    <div class="pub-venue">LVIII International Multidisciplinary Conference</div>
+                    <div class="pub-meta">
+                        Single Author · Almaty, Kazakhstan | 独立作者 · 哈萨克斯坦阿拉木图
+                        <span class="pub-tag">Conference</span>
+                    </div>
+                </div>
+
+                <div class="pub-item">
+                    <div class="pub-title">Cross-Border Trade and Financial Integration between Kazakhstan and China: Managerial and Policy Perspectives | 哈萨克斯坦与中国的跨境贸易与金融一体化：管理与政策视角</div>
+                    <div class="pub-venue">International Conference on Scientific Practice</div>
+                    <div class="pub-meta">
+                        Single Author · Aug 15, 2025 · New York, USA | 独立作者 · 2025年8月15日 · 美国纽约
+                        <span class="pub-tag">Published</span>
+                    </div>
+                </div>
+
+                <div class="pub-item">
+                    <div class="pub-title">Foreign Policy as a Determinant of Investment and Innovation Flows: Modeling the China–U.S. Technological Landscape | 外交政策作为投资与创新流动的决定因素：中美技术格局建模</div>
+                    <div class="pub-venue">Social Science Citation Index (SSCI)</div>
+                    <div class="pub-meta">
+                        3rd Author · Almaty, Kazakhstan | 第三作者 · 哈萨克斯坦阿拉木图
+                        <span class="pub-tag ssci">SSCI</span>
+                    </div>
+                </div>
+
+                <div class="pub-item" style="opacity: 0.9;">
+                    <div class="pub-title">BRI as a factor of financial opportunities and challenges for European and Asian countries: prospects and risks | "一带一路"作为欧亚国家金融机遇与挑战的因素：前景与风险</div>
+                    <div class="pub-venue">[Research in Progress] | 研究中</div>
+                    <div class="pub-meta">
+                        Single Author | 独立作者
+                        <span class="pub-tag">In Progress</span>
+                    </div>
+                </div>
+
+                <div class="pub-item" style="opacity: 0.9;">
+                    <div class="pub-title">A Cross-National Comparative Study on Sustainable Finance and Green Bond Regulation | 可持续金融与绿色债券监管的跨国比较研究</div>
+                    <div class="pub-venue">[Research in Progress] | 研究中</div>
+                    <div class="pub-meta">
+                        Single Author · Kuala Lumpur & Taiwan | 独立作者 · 吉隆坡与台湾
+                        <span class="pub-tag">In Progress</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Certificates & Training -->
+        <section class="section">
+            <div class="section-header">
+                <span class="section-title">Certifications & Training</span>
+                <span class="section-title-cn">专业证书与培训</span>
+            </div>
+
+            <div class="compact-grid">
+                <div>
+                    <h3 style="font-size: 16px; color: var(--navy); margin-bottom: 15px; text-transform: uppercase; letter-spacing: 1px;">Professional Certificates | 专业证书</h3>
+                    <ul class="compact-list">
+                        <li>Certificate of Accounting Profession | 会计职业资格证书</li>
+                        <li>Certificate of Asset Management Association of China | 中国证券投资基金业协会证书</li>
+                        <li>Associate Financial Planner | 助理金融理财师</li>
+                        <li>Certified Financial Planner (CFP) | 国际金融理财师</li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h3 style="font-size: 16px; color: var(--navy); margin-bottom: 15px; text-transform: uppercase; letter-spacing: 1px;">Professional Training | 专业培训</h3>
+                    <div class="card" style="padding: 20px; margin-bottom: 15px;">
+                        <div style="font-weight: 700; color: var(--navy); margin-bottom: 5px;">University of Shanghai for Science and Technology | 上海理工大学</div>
+                        <div style="font-size: 13px; color: var(--slate); margin-bottom: 8px;">Jan 2026 | 2026年1月</div>
+                        <div style="font-size: 13px; line-height: 1.6;">
+                            Bridging the world as a Eurasian Entrepreneur; Supply Chain Management and Logistics Services: Chinese Practice; Doing business in China; Integration of AI-Enabled Models into Academic Research<br>
+                            <span style="color: var(--slate); font-size: 12px; display: block; margin-top: 5px;">
+                                欧亚企业家之桥；供应链管理与物流服务：中国实践；在中国做生意；将人工智能模型融入学术研究
+                            </span>
+                        </div>
+                    </div>
+                    <div style="font-size: 13px; color: var(--slate); padding: 10px 0; border-bottom: 1px solid var(--border);">
+                        <strong>EMS Languages Centre KL</strong> | 吉隆坡EMS语言中心<br>
+                        May 2022 - Nov 2022 · English Training | 2022年5-11月 · 英语培训
+                    </div>
+                    <div style="font-size: 13px; color: var(--slate); padding: 10px 0;">
+                        <strong>Olé Languages BCN</strong> | 巴塞罗那Olé语言学校<br>
+                        Jun 2023 - Jul 2024 · Spanish Learning | 2023年6月-2024年7月 · 西班牙语学习
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Languages & Awards -->
+        <section class="section">
+            <div class="compact-grid">
+                <div>
+                    <div class="section-header" style="margin-top: 0;">
+                        <span class="section-title">Languages</span>
+                        <span class="section-title-cn">语言能力</span>
+                    </div>
+                    <div class="lang-row">
+                        <span class="lang-name">Mandarin | 普通话</span>
+                        <span class="lang-level">Native | 母语</span>
+                    </div>
+                    <div class="lang-row">
+                        <span class="lang-name">English | 英语</span>
+                        <span class="lang-level">Intermediate | 中级</span>
+                    </div>
+                    <div class="lang-row">
+                        <span class="lang-name">Spanish | 西班牙语</span>
+                        <span class="lang-level">Intermediate | 中级</span>
+                    </div>
+                    <div class="lang-row">
+                        <span class="lang-name">Arabic | 阿拉伯语</span>
+                        <span class="lang-level">Beginner | 初级</span>
+                    </div>
+                    <div class="lang-row">
+                        <span class="lang-name">Portuguese | 葡萄牙语</span>
+                        <span class="lang-level">Beginner | 初级</span>
+                    </div>
+                </div>
+
+                <div>
+                    <div class="section-header" style="margin-top: 0;">
+                        <span class="section-title">Honors</span>
+                        <span class="section-title-cn">荣誉奖项</span>
+                    </div>
+                    <div class="awards-container">
+                        <div class="award-pill">Second Prize for Semi-annual Revenue Growth Contribution (2019)<br><span style="font-size: 11px; opacity: 0.7;">浙商银行2019年半年度营收增长贡献二等奖</span></div>
+                        <div class="award-pill">Outstanding Employees of Chengdu Branch (2018)<br><span style="font-size: 11px; opacity: 0.7;">浙商银行成都分行2018年度优秀员工</span></div>
+                        <div class="award-pill">Second Prize for Semi-annual Deposit Contribution (2017)<br><span style="font-size: 11px; opacity: 0.7;">浙商银行2017年半年度存款贡献二等奖</span></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <strong>© 2026 ZHAO JIE 赵杰. All Rights Reserved.</strong>
+            <div style="margin-top: 8px;">
+                Unauthorized reproduction prohibited | 未经授权严禁复制或商业使用
+            </div>
+        </footer>
+    </div>
+
+    <script>
+        function setLang(lang) {
+            document.body.setAttribute('data-lang', lang);
+            
+            // Update buttons
+            document.querySelectorAll('.lang-btn').forEach(btn => {
+                btn.classList.remove('active');
+                if (btn.textContent.toLowerCase().includes(lang)) {
+                    btn.classList.add('active');
+                }
+            });
+
+            // Update specific elements visibility
+            const cnContents = document.querySelectorAll('.cn-content');
+            const enContents = document.querySelectorAll('.card-content, .section-title');
+            
+            if (lang === 'cn') {
+                document.documentElement.lang = 'zh-CN';
+            } else {
+                document.documentElement.lang = 'en';
+            }
+        }
+
+        // Initialize
+        document.body.setAttribute('data-lang', 'en');
+    </script>
+
+</body>
+</html>
