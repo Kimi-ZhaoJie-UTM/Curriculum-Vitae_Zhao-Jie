@@ -474,12 +474,37 @@
             background: linear-gradient(to right, rgba(15, 23, 42, 0.02), transparent);
         }
 
+        /* Publication Link Styling */
         .pub-title {
             font-weight: 600;
             color: var(--primary);
             font-size: 15px;
             margin-bottom: 6px;
             line-height: 1.4;
+        }
+
+        .pub-title a {
+            color: inherit;
+            text-decoration: none;
+            border-bottom: 1px solid transparent;
+            transition: all 0.3s ease;
+        }
+
+        .pub-title a:hover {
+            color: var(--accent);
+            border-bottom-color: var(--accent);
+        }
+
+        .pub-title a::after {
+            content: '↗';
+            font-size: 12px;
+            margin-left: 4px;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        .pub-title a:hover::after {
+            opacity: 1;
         }
 
         .pub-venue {
@@ -1139,8 +1164,10 @@
             <div class="pub-grid">
                 <div class="pub-item">
                     <div class="pub-title">
-                        <span class="en-text">Language Barriers and Their Impact on International Business Expansion</span>
-                        <span class="cn-text">语言障碍及其对国际业务拓展的影响</span>
+                        <a href="https://kimi-zhaojie-utm.github.io/PhD-Dissertation_KZ-1/" target="_blank">
+                            <span class="en-text">Language Barriers and Their Impact on International Business Expansion</span>
+                            <span class="cn-text">语言障碍及其对国际业务拓展的影响</span>
+                        </a>
                     </div>
                     <div class="pub-venue">International Journal of Science and Practice</div>
                     <div class="pub-meta">
